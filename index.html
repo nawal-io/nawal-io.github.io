@@ -9,7 +9,7 @@
   <meta name="description" content="Portfolio & CV Nawal Aulia Hasan Hunaifa - Internet Engineering Student UGM & Designer.">
   <meta name="keywords" content="Nawal Aulia Hasan Hunaifa, UGM, Internet Engineering, Graphic Designer, Portfolio">
   
-  <!-- Verifikasi Google Search Console (Ganti KODE_VERIFIKASI_KAMU dengan kode dari Google) -->
+  <!-- Verifikasi Google Search Console -->
   <meta name="google-site-verification" content="KODE_VERIFIKASI_KAMU" />
 
   <!-- Google Fonts -->
@@ -74,6 +74,7 @@
       border: 3px solid var(--accent-purple);
       overflow: hidden;
       flex-shrink: 0;
+      background: var(--bg-card);
     }
 
     .avatar-wrapper img {
@@ -254,7 +255,7 @@
     <!-- Profile & Header Section -->
     <header class="profile-card">
       <div class="avatar-wrapper">
-        <img src="https://mir-s3-cdn-cf.behance.net/user/276/782294138139729.628e4ae91e847.jpg" alt="Nawal Hunaifa">
+        <img src="https://github.com/nawal-io.png" alt="Nawal Hunaifa" onerror="this.src='https://ui-avatars.com/api/?name=Nawal+Hunaifa&background=c4a7e7&color=1e1b2e'">
       </div>
       <div class="profile-info">
         <h1>Nawal Aulia Hasan Hunaifa</h1>
@@ -304,49 +305,60 @@
 
   </div>
 
-  <!-- JavaScript: Fetch RSS Feed Behance via Client-Side -->
+  <!-- JavaScript: Fetch RSS Feed Behance via Proxy Parser -->
   <script>
     const BEHANCE_USERNAME = 'nawalhunaifa';
-    const RSS_CONVERTER_URL = `https://api.rss2json.com/v1/api.json?rss_url=https://www.behance.net/feeds/user?username=${BEHANCE_USERNAME}`;
+    const RSS_URL = `https://www.behance.net/feeds/user?username=${BEHANCE_USERNAME}`;
+    const PROXY_URL = `https://api.allorigins.win/get?url=${encodeURIComponent(RSS_URL)}`;
 
     async function loadBehanceProjects() {
       const gallery = document.getElementById('behance-gallery');
       
       try {
-        const response = await fetch(RSS_CONVERTER_URL);
+        const response = await fetch(PROXY_URL);
         const data = await response.json();
 
-        if (data.status === 'ok' && data.items.length > 0) {
-          gallery.innerHTML = ''; 
+        if (data.contents) {
+          const parser = new DOMParser();
+          const xmlDoc = parser.parseFromString(data.contents, "text/xml");
+          const items = xmlDoc.querySelectorAll("item");
 
-          data.items.forEach(item => {
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = item.description;
-            const imgTag = tempDiv.querySelector('img');
-            const imgSrc = imgTag ? imgTag.src : 'https://via.placeholder.com/400x300?text=No+Image';
+          if (items.length > 0) {
+            gallery.innerHTML = ''; 
 
-            const card = document.createElement('a');
-            card.className = 'project-card';
-            card.href = item.link;
-            card.target = '_blank';
-            card.rel = 'noopener noreferrer';
+            items.forEach(item => {
+              const title = item.querySelector("title")?.textContent || "Untitled Project";
+              const link = item.querySelector("link")?.textContent || "#";
+              const description = item.querySelector("description")?.textContent || "";
 
-            card.innerHTML = `
-              <img class="project-thumb" src="${imgSrc}" alt="${item.title}" loading="lazy" />
-              <div class="project-details">
-                <div class="project-title">${item.title}</div>
-                <div class="project-meta">Lihat di Behance ↗</div>
-              </div>
-            `;
+              const tempDiv = document.createElement('div');
+              tempDiv.innerHTML = description;
+              const imgTag = tempDiv.querySelector('img');
+              const imgSrc = imgTag ? imgTag.src : 'https://via.placeholder.com/400x300?text=No+Image';
 
-            gallery.appendChild(card);
-          });
-        } else {
-          gallery.innerHTML = '<div class="loading-text">Tidak ada proyek publik yang ditemukan di Behance.</div>';
+              const card = document.createElement('a');
+              card.className = 'project-card';
+              card.href = link;
+              card.target = '_blank';
+              card.rel = 'noopener noreferrer';
+
+              card.innerHTML = `
+                <img class="project-thumb" src="${imgSrc}" alt="${title}" loading="lazy" />
+                <div class="project-details">
+                  <div class="project-title">${title}</div>
+                  <div class="project-meta">Lihat di Behance ↗</div>
+                </div>
+              `;
+
+              gallery.appendChild(card);
+            });
+          } else {
+            gallery.innerHTML = '<div class="loading-text">Tidak ada proyek publik yang ditemukan di Behance.</div>';
+          }
         }
       } catch (error) {
         console.error('Error fetching Behance RSS:', error);
-        gallery.innerHTML = '<div class="loading-text">Gagal memuat portofolio otomatis dari Behance. Silakan cek langsung di profil Behance saya.</div>';
+        gallery.innerHTML = '<div class="loading-text">Gagal memuat portofolio. Silakan cek langsung di profil Behance saya.</div>';
       }
     }
 
