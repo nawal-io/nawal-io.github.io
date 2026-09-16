@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nawal Aulia Hasan Hunaifa - Portfolio & CV</title>
   
+  <!-- Favicon / Logo Website (Ganti logo.png dengan nama file logomu) -->
+  <link rel="icon" type="image/png" href="https://media.licdn.com/dms/image/v2/D5603AQHmjeHehl7fDw/profile-displayphoto-scale_400_400/B56aAOzJAIHsAk-/0/1786954683070?e=1791417600&v=beta&t=-X4PnMid5hUxhR0DCDGn_k1LItupiifpDHJ5ShMeoZs">
+
   <!-- Meta SEO -->
-  <meta name="description" content="Portfolio & CV Nawal Aulia Hasan Hunaifa - Mahasiswa D4 Teknologi Rekayasa Internet UGM & Graphic Designer.">
-  <meta name="keywords" content="Nawal Aulia Hasan Hunaifa, UGM, Teknologi Rekayasa Internet, Graphic Designer, Visual Branding, Portfolio">
+  <meta name="description" content="Portfolio & CV Nawal Aulia Hasan Hunaifa - Mahasiswa D4 Teknologi Rekayasa Internet UGM, Graphic Designer & Technology Enthusiast.">
+  <meta name="keywords" content="Nawal Aulia Hasan Hunaifa, UGM, Teknologi Rekayasa Internet, Graphic Designer, Visual Branding, Cybersecurity, Portfolio">
   
   <!-- Verifikasi Google Search Console -->
-  <meta name="google-site-verification" content="KODE_VERIFIKASI_KAMU" />
+  <meta name="google-site-verification" content="k2HyCBohgtuZ6be4xnMoOIeWEMsj5syRDVtiJCqbG1o" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,6 +31,7 @@
       --accent-rose: #ebbcba;
       --accent-purple: #c4a7e7;
       --accent-gold: #f6c177;
+      --accent-blue: #7aa2f7;
       --border-color: #3b3352;
     }
 
@@ -38,7 +42,7 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
-    /* TEKNIK SEMBUNYIKAN SCROLLBAR GLOBAL (SEMUA BROWSER) */
+    /* TEKNIK SEMBUNYIKAN SCROLLBAR GLOBAL */
     html {
       overflow-y: scroll;
       scrollbar-width: none; /* Firefox */
@@ -50,11 +54,11 @@
       color: var(--text-main);
       line-height: 1.6;
       padding: 2.5rem 1rem;
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* IE & Edge */
+      scrollbar-width: none;
+      -ms-overflow-style: none;
     }
 
-    /* Chromium (Chrome, Safari, Opera, Edge Baru) */
+    /* Chromium (Chrome, Safari, Opera, Edge) */
     html::-webkit-scrollbar,
     body::-webkit-scrollbar,
     *::-webkit-scrollbar {
@@ -147,6 +151,12 @@
       background: var(--accent-purple);
       color: var(--bg-base);
       border-color: var(--accent-purple);
+    }
+
+    .btn-linkedin:hover {
+      background: #0077b5;
+      color: #ffffff;
+      border-color: #0077b5;
     }
 
     /* Section Headers */
@@ -299,7 +309,7 @@
       height: 100%;
       border: none;
       display: block;
-      scrolling: no; /* Cegah scrollbar internal di dalam iframe */
+      scrolling: no;
     }
   </style>
 </head>
@@ -310,14 +320,15 @@
     <!-- Profile & Header Section -->
     <header class="profile-card">
       <div class="avatar-wrapper">
-        <img src="https://ui-avatars.com/api/?name=Nawal+Hunaifa&background=c4a7e7&color=1e1b2e&size=128" alt="Nawal Hunaifa">
+        <img src="https://media.licdn.com/dms/image/v2/D5603AQHmjeHehl7fDw/profile-displayphoto-scale_400_400/B56aAOzJAIHsAk-/0/1786954683070?e=1791417600&v=beta&t=-X4PnMid5hUxhR0DCDGn_k1LItupiifpDHJ5ShMeoZs" alt="Nawal Hunaifa">
       </div>
       <div class="profile-info">
         <h1>Nawal Aulia Hasan Hunaifa</h1>
-        <div class="subtitle">D4 Teknologi Rekayasa Internet UGM • Visual Designer</div>
-        <p class="bio">Mahasiswa yang berdedikasi tinggi di bidang desain grafis, visual branding, dan produksi media digital. Berlatar belakang kuat dalam pembuatan aset visual media sosial, manajemen konten, serta siap berkontribusi dalam komunikasi visual modern.</p>
+        <div class="subtitle">D4 Teknologi Rekayasa Internet UGM • Visual Designer & Tech Enthusiast</div>
+        <p class="bio">Mahasiswa UGM yang memiliki ketertarikan tinggi pada teknologi, pengembangan digital, dan dunia kreatif. Berlatar belakang kuat dalam desain grafis, visual branding, manajemen konten, serta terus mengeksplorasi bidang teknis seperti keamanan siber dan AI untuk menyelesaikan permasalahan nyata.</p>
         
         <div class="social-links">
+          <a href="https://linkedin.com/in/nawalauliahasanhunaifa" target="_blank" class="btn btn-linkedin">💼 LinkedIn</a>
           <a href="https://behance.net/nawalhunaifa" target="_blank" class="btn">🎨 Behance</a>
           <a href="https://github.com/nawal-io" target="_blank" class="btn">💻 GitHub</a>
           <a href="mailto:nawalauliahasanhunaifa@mail.ugm.ac.id" class="btn">✉️ Email</a>
@@ -336,7 +347,7 @@
               <span class="timeline-date">2026</span>
             </div>
             <div class="timeline-desc" style="color: var(--accent-purple); font-weight: 600;">Universitas Gadjah Mada (UGM)</div>
-            <div class="timeline-desc" style="margin-top: 0.4rem;">Mempelajari fondasi teknologi informasi, infrastruktur jaringan, serta pemanfaatan media digital dan perangkat lunak untuk komunikasi visual modern.</div>
+            <div class="timeline-desc" style="margin-top: 0.4rem;">Mempelajari fondasi teknologi informasi, infrastruktur jaringan, keamanan siber, serta pemanfaatan media digital dan perangkat lunak untuk komunikasi visual modern.</div>
           </div>
         </div>
         <div class="cv-box">
@@ -345,7 +356,7 @@
               <span class="timeline-title">SMAN 1 Kasihan</span>
               <span class="timeline-date">2023 - 2026</span>
             </div>
-            <div class="timeline-desc" style="margin-top: 0.4rem;">Menyelesaikan pendidikan menengah atas dengan fokus pada pengembangan kepemimpinan, kerja tim, dan keterlibatan aktif dalam kegiatan publikasi organisasi sekolah.</div>
+            <div class="timeline-desc" style="margin-top: 0.4rem;">Menyelesaikan pendidikan menengah atas dengan fokus pada pengembangan kepemimpinan, kerja tim, dan keterlibatan aktif dalam kegiatan publikasi serta organisasi sekolah.</div>
           </div>
         </div>
       </div>
@@ -401,7 +412,7 @@
 
     <!-- Keterampilan, Bahasa & Penghargaan -->
     <section>
-      <h2 class="section-title">Keahlian & Prestasi</h2>
+      <h2 class="section-title">Keahlian & Lisensi</h2>
       <div class="cv-grid cv-grid-2">
         
         <div class="cv-box">
@@ -410,7 +421,11 @@
           <div style="margin-bottom: 1rem;">
             <div style="font-size: 0.85rem; color: var(--accent-rose); font-weight: 600; margin-bottom: 0.4rem;">HARD SKILLS</div>
             <div class="pill-wrapper">
+              <span class="pill" style="border-color: var(--accent-purple); color: #ffffff;">Keamanan Siber (Cybersecurity)</span>
               <span class="pill">Graphic Design</span>
+              <span class="pill">Image Design</span>
+              <span class="pill">Computer Graphics Design</span>
+              <span class="pill">Online Graphics</span>
               <span class="pill">Adobe Photoshop</span>
               <span class="pill">Adobe Illustrator</span>
               <span class="pill">Canva</span>
@@ -418,7 +433,6 @@
               <span class="pill">Content Creation</span>
               <span class="pill">Layout & Typography</span>
               <span class="pill">Photo Editing</span>
-              <span class="pill">Basic Video Editing</span>
               <span class="pill">Google Workspace</span>
             </div>
           </div>
@@ -427,6 +441,7 @@
             <div style="font-size: 0.85rem; color: var(--accent-rose); font-weight: 600; margin-bottom: 0.4rem;">SOFT SKILLS</div>
             <div class="pill-wrapper">
               <span class="pill">Creative Thinking</span>
+              <span class="pill">Problem Solving</span>
               <span class="pill">Attention to Detail</span>
               <span class="pill">Time Management</span>
               <span class="pill">Adaptability</span>
@@ -437,13 +452,15 @@
         </div>
 
         <div class="cv-box">
-          <h3>🏆 Penghargaan & Sertifikasi</h3>
+          <h3>📜 Lisensi & Sertifikasi</h3>
           <ul class="badge-list">
+            <li><span>🤖</span> <div><strong>Siswa Tersertifikasi Gemini - Universitas</strong> — Google for Education (Sep 2026 - Sep 2029)</div></li>
+            <li><span>🛡️</span> <div><strong>Introduction to Cybersecurity</strong> — Cisco (Feb 2026)</div></li>
+            <li><span>💡</span> <div><strong>Introduction to Modern AI</strong> — Cisco (Feb 2026)</div></li>
+            <li><span>💻</span> <div><strong>HackerRank Skill Certificate</strong> — HackerRank</div></li>
+            <li><span>🎨</span> <div><strong>Sertifikasi Responsive Web Design</strong> — freeCodeCamp (2024)</div></li>
+            <li><span>🚀</span> <div><strong>Baparekraf Developer Day</strong> — Dicoding Coaching (2023)</div></li>
             <li><span>🥇</span> <div><strong>Juara 7 Tryout Magneto</strong> — SMA Muhammadiyah 2 Yogyakarta (2023)</div></li>
-            <li><span>🎨</span> <div><strong>Peserta Lomba Poster Digital</strong> (2023)</div></li>
-            <li><span>📜</span> <div><strong>Sertifikasi Responsive Web Design</strong> — freeCodeCamp (2024)</div></li>
-            <li><span>💻</span> <div><strong>Sertifikat Baparekraf Developer Day</strong> — Dicoding Coaching (2023)</div></li>
-            <li><span>🎓</span> <div><strong>Sertifikat Project & Kursus</strong> — Microsoft / Coursera Network (2024)</div></li>
           </ul>
 
           <h3 style="margin-top: 1.5rem;">🗣️ Penguasaan Bahasa</h3>
@@ -458,29 +475,25 @@
       </div>
     </section>
 
-   <!-- Behance Portfolio Embed Section -->
+    <!-- Behance Portfolio Embed Section (5 Proyek Unik) -->
     <section>
       <h2 class="section-title">Portofolio Behance</h2>
       <div id="behance-gallery" class="portfolio-grid">
         
-        <!-- Proyek 1 -->
         <div class="iframe-card">
           <iframe src="https://www.behance.net/embed/project/252195439?ilo0=1" allowfullscreen loading="lazy" frameborder="0" scrolling="no"></iframe>
         </div>
 
-        <!-- Proyek 2 -->
-        <div class="iframe-card">
-          <iframe src="https://www.behance.net/embed/project/202450543?ilo0=1" allowfullscreen loading="lazy" frameborder="0" scrolling="no"></iframe>
-        </div>
-
-        <!-- Proyek 3 -->
         <div class="iframe-card">
           <iframe src="https://www.behance.net/embed/project/202450323?ilo0=1" allowfullscreen loading="lazy" frameborder="0" scrolling="no"></iframe>
         </div>
 
-        <!-- Proyek 4 (Baru) -->
         <div class="iframe-card">
           <iframe src="https://www.behance.net/embed/project/202449825?ilo0=1" allowfullscreen loading="lazy" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <div class="iframe-card">
+          <iframe src="https://www.behance.net/embed/project/202450543?ilo0=1" allowfullscreen loading="lazy" frameborder="0" scrolling="no"></iframe>
         </div>
 
       </div>
