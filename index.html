@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nawal Aulia Hasan Hunaifa - Portfolio & CV</title>
   
-  <!-- Favicon / Logo Website (Ganti logo.png dengan nama file logomu) -->
+  <!-- Favicon / Logo Website -->
   <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1ABhtvISSi7Drd_q_3J4t4T1lIvtKbrVZ">
 
   <!-- Meta SEO -->
@@ -260,6 +260,18 @@
       font-size: 0.82rem;
     }
 
+    .pill-design {
+      border-color: var(--accent-rose) !important;
+      color: #ffffff !important;
+      background: rgba(235, 188, 186, 0.12);
+    }
+
+    .pill-code {
+      border-color: var(--accent-blue) !important;
+      color: #ffffff !important;
+      background: rgba(122, 162, 247, 0.12);
+    }
+
     .badge-list {
       list-style: none;
     }
@@ -309,7 +321,76 @@
       height: 100%;
       border: none;
       display: block;
-      scrolling: no;
+    }
+
+    /* Web Showcase Section (Clean Layout) */
+    .web-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .web-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .web-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-purple);
+    }
+
+    .browser-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-card);
+      padding: 0.6rem 0.8rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 1.25rem;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    .dot-red { background: #eb6f92; }
+    .dot-yellow { background: #f6c177; }
+    .dot-green { background: #9ccfd8; }
+
+    .browser-url {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-left: auto;
+      font-family: monospace;
+    }
+
+    .web-card h3 {
+      color: #ffffff;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .web-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    .web-card-footer {
+      margin-top: auto;
     }
   </style>
 </head>
@@ -416,37 +497,55 @@
       <div class="cv-grid cv-grid-2">
         
         <div class="cv-box">
-          <h3>🛠️ Hard & Soft Skills</h3>
+          <h3>🛠️ Technical & Creative Skills</h3>
           
-          <div style="margin-bottom: 1rem;">
-            <div style="font-size: 0.85rem; color: var(--accent-rose); font-weight: 600; margin-bottom: 0.4rem;">HARD SKILLS</div>
+          <!-- Skill Desain & Visual -->
+          <div style="margin-bottom: 1.2rem;">
+            <div style="font-size: 0.85rem; color: var(--accent-rose); font-weight: 600; margin-bottom: 0.4rem; letter-spacing: 0.5px;">
+              DESIGN & CREATIVE TECHNOLOGY
+            </div>
             <div class="pill-wrapper">
-              <span class="pill" style="border-color: var(--accent-purple); color: #ffffff;">Keamanan Siber (Cybersecurity)</span>
-              <span class="pill">Graphic Design</span>
-              <span class="pill">Image Design</span>
-              <span class="pill">Computer Graphics Design</span>
-              <span class="pill">Online Graphics</span>
-              <span class="pill">Adobe Photoshop</span>
-              <span class="pill">Adobe Illustrator</span>
-              <span class="pill">Canva</span>
-              <span class="pill">Visual Branding</span>
-              <span class="pill">Content Creation</span>
-              <span class="pill">Layout & Typography</span>
-              <span class="pill">Photo Editing</span>
-              <span class="pill">Google Workspace</span>
+              <span class="pill pill-design">Graphic Design</span>
+              <span class="pill pill-design">Visual Branding & Identity</span>
+              <span class="pill pill-design">UI/UX Fundamentals</span>
+              <span class="pill pill-design">Adobe Photoshop</span>
+              <span class="pill pill-design">Adobe Illustrator</span>
+              <span class="pill pill-design">Canva Pro</span>
+              <span class="pill pill-design">Layout & Typography</span>
+              <span class="pill pill-design">Content Strategy</span>
             </div>
           </div>
 
-          <div>
-            <div style="font-size: 0.85rem; color: var(--accent-rose); font-weight: 600; margin-bottom: 0.4rem;">SOFT SKILLS</div>
+          <!-- Skill Coding & Engineering -->
+          <div style="margin-bottom: 1.2rem;">
+            <div style="font-size: 0.85rem; color: var(--accent-blue); font-weight: 600; margin-bottom: 0.4rem; letter-spacing: 0.5px;">
+              SOFTWARE & NETWORK ENGINEERING
+            </div>
             <div class="pill-wrapper">
-              <span class="pill">Creative Thinking</span>
+              <span class="pill pill-code">HTML5 / CSS3</span>
+              <span class="pill pill-code">JavaScript (ES6+)</span>
+              <span class="pill pill-code">Python</span>
+              <span class="pill pill-code">PHP</span>
+              <span class="pill pill-code">Git & GitHub</span>
+              <span class="pill pill-code">REST API Integration</span>
+              <span class="pill pill-code">Web Performance Optimization</span>
+              <span class="pill pill-code">Client-Side Processing (Browser APIs)</span>
+              <span class="pill pill-code">Computer Networking Fundamentals</span>
+              <span class="pill pill-code">Cybersecurity Essentials</span>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div>
+            <div style="font-size: 0.85rem; color: var(--accent-gold); font-weight: 600; margin-bottom: 0.4rem; letter-spacing: 0.5px;">
+              PROFESSIONAL ATTRIBUTES
+            </div>
+            <div class="pill-wrapper">
               <span class="pill">Problem Solving</span>
+              <span class="pill">Analytical Thinking</span>
               <span class="pill">Attention to Detail</span>
-              <span class="pill">Time Management</span>
+              <span class="pill">Cross-Functional Collaboration</span>
               <span class="pill">Adaptability</span>
-              <span class="pill">Team Collaboration</span>
-              <span class="pill">Visual Communication</span>
             </div>
           </div>
         </div>
@@ -475,7 +574,7 @@
       </div>
     </section>
 
-    <!-- Behance Portfolio Embed Section (5 Proyek Unik) -->
+    <!-- Behance Portfolio Embed Section -->
     <section>
       <h2 class="section-title">Portofolio Behance</h2>
       <div id="behance-gallery" class="portfolio-grid">
@@ -502,6 +601,116 @@
 
         <div class="iframe-card">
           <iframe src="https://www.behance.net/embed/project/238013211?ilo0=1" allowfullscreen loading="lazy" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Web Apps & Tools Showcase Section -->
+    <section>
+      <h2 class="section-title">Web Apps & Open Source Tools</h2>
+      <div class="web-grid">
+        
+        <!-- PDF Compressor -->
+        <div class="web-card">
+          <div>
+            <div class="browser-header">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="browser-url">nawal-io.github.io/pdf</span>
+            </div>
+            <h3>📄 Local PDF Compressor</h3>
+            <p>Aplikasi kompresi berkas PDF berbasis peramban yang memproses dokumen sepenuhnya secara lokal tanpa unggah ke server, menjamin keamanan dan privasi data secara menyeluruh.</p>
+          </div>
+          <div class="web-card-footer">
+            <a href="https://nawal-io.github.io/pdf/" target="_blank" rel="noopener noreferrer" class="btn" style="width: 100%; justify-content: center;">🚀 Buka Website</a>
+          </div>
+        </div>
+
+        <!-- QR Code Generator -->
+        <div class="web-card">
+          <div>
+            <div class="browser-header">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="browser-url">nawal-io.github.io/qr</span>
+            </div>
+            <h3>📱 QR Code Generator</h3>
+            <p>Alat pembuat kode QR kustom yang efisien untuk tautan, teks, maupun informasi kontak digital dengan antarmuka yang responsif dan intuitif.</p>
+          </div>
+          <div class="web-card-footer">
+            <a href="https://nawal-io.github.io/qr/" target="_blank" rel="noopener noreferrer" class="btn" style="width: 100%; justify-content: center;">🚀 Buka Website</a>
+          </div>
+        </div>
+
+        <!-- Internet Speed Test -->
+        <div class="web-card">
+          <div>
+            <div class="browser-header">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="browser-url">nawal-io.github.io/speed</span>
+            </div>
+            <h3>⚡ Network Speed Checker</h3>
+            <p>Alat penguji performa koneksi internet real-time yang mengukur kecepatan unduh, unggah, dan latensi jaringan secara presisi dengan visualisasi data yang informatif.</p>
+          </div>
+          <div class="web-card-footer">
+            <a href="https://nawal-io.github.io/speed/" target="_blank" rel="noopener noreferrer" class="btn" style="width: 100%; justify-content: center;">🚀 Buka Website</a>
+          </div>
+        </div>
+
+        <!-- Photobooth Web App -->
+        <div class="web-card">
+          <div>
+            <div class="browser-header">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="browser-url">nawal-io.github.io/photobooth</span>
+            </div>
+            <h3>📸 Online Photobooth App</h3>
+            <p>Aplikasi foto studio digital interaktif berbasis web untuk mengambil gambar secara langsung dengan dukungan beragam opsi bingkai estetik dan filter visual.</p>
+          </div>
+          <div class="web-card-footer">
+            <a href="https://nawal-io.github.io/photobooth/" target="_blank" rel="noopener noreferrer" class="btn" style="width: 100%; justify-content: center;">🚀 Buka Website</a>
+          </div>
+        </div>
+
+        <!-- Screen Recorder Web App -->
+        <div class="web-card">
+          <div>
+            <div class="browser-header">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="browser-url">nawal-io.github.io/recorder</span>
+            </div>
+            <h3>🎥 Screen Recorder + Facecam</h3>
+            <p>Perangkat perekam layar berbasis peramban yang dilengkapi integrasi kamera secara langsung tanpa memerlukan instalasi perangkat lunak tambahan.</p>
+          </div>
+          <div class="web-card-footer">
+            <a href="https://nawal-io.github.io/recorder/" target="_blank" rel="noopener noreferrer" class="btn" style="width: 100%; justify-content: center;">🚀 Buka Website</a>
+          </div>
+        </div>
+
+        <!-- Media Converter Web App -->
+        <div class="web-card">
+          <div>
+            <div class="browser-header">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="browser-url">nawal-io.github.io/media</span>
+            </div>
+            <h3>🖼️ Image Media Converter</h3>
+            <p>Aplikasi konversi format gambar kilat antar-ekstensi populer seperti JPG, PNG, dan WebP yang diproses secara lokal dengan kompresi kualitas optimal.</p>
+          </div>
+          <div class="web-card-footer">
+            <a href="https://nawal-io.github.io/media/" target="_blank" rel="noopener noreferrer" class="btn" style="width: 100%; justify-content: center;">🚀 Buka Website</a>
+          </div>
         </div>
 
       </div>
