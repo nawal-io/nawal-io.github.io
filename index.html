@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nawal Aulia Hasan Hunaifa - Portfolio & CV</title>
+  
+  <!-- Meta SEO -->
+  <meta name="description" content="Portfolio & CV Nawal Aulia Hasan Hunaifa - Internet Engineering Student UGM & Designer.">
+  <meta name="keywords" content="Nawal Aulia Hasan Hunaifa, UGM, Internet Engineering, Graphic Designer, Portfolio">
+  
+  <!-- Verifikasi Google Search Console (Ganti KODE_VERIFIKASI_KAMU dengan kode dari Google) -->
+  <meta name="google-site-verification" content="KODE_VERIFIKASI_KAMU" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-base: #1e1b2e;
+      --bg-surface: #2d2640;
+      --bg-card: #362f4c;
+      --text-main: #e0def4;
+      --text-muted: #908caa;
+      --accent-rose: #ebbcba;
+      --accent-purple: #c4a7e7;
+      --border-color: #4a3e63;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Header Profile Section */
+    .profile-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (min-width: 640px) {
+      .profile-card {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    .avatar-wrapper {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid var(--accent-purple);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .avatar-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-info h1 {
+      font-size: 1.8rem;
+      color: #ffffff;
+      margin-bottom: 0.2rem;
+    }
+
+    .profile-info .subtitle {
+      color: var(--accent-purple);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .profile-info p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      background: var(--bg-card);
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid var(--border-color);
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: var(--accent-purple);
+      color: var(--bg-base);
+      border-color: var(--accent-purple);
+    }
+
+    /* Section Header */
+    .section-title {
+      margin: 3rem 0 1.5rem 0;
+      font-size: 1.4rem;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border-color);
+    }
+
+    /* CV Section Grid */
+    .cv-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .cv-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .cv-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .cv-box h3 {
+      color: var(--accent-rose);
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .cv-item {
+      margin-bottom: 1rem;
+    }
+
+    .cv-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-item .title {
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .cv-item .sub {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Behance Portfolio Gallery Grid */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-purple);
+    }
+
+    .project-thumb {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      background: var(--bg-card);
+    }
+
+    .project-details {
+      padding: 1rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-meta {
+      font-size: 0.8rem;
+      color: var(--accent-rose);
+    }
+
+    /* State Handlers */
+    .loading-text {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Profile & Header Section -->
+    <header class="profile-card">
+      <div class="avatar-wrapper">
+        <img src="https://mir-s3-cdn-cf.behance.net/user/276/782294138139729.628e4ae91e847.jpg" alt="Nawal Hunaifa">
+      </div>
+      <div class="profile-info">
+        <h1>Nawal Aulia Hasan Hunaifa</h1>
+        <div class="subtitle">Internet Engineering Student @ UGM & Graphic Designer</div>
+        <p>Fokus pada pengembangan sistem jaringan, simulasi hardware, serta desain grafis & visual brand digital.</p>
+        
+        <div class="social-links">
+          <a href="https://behance.net/nawalhunaifa" target="_blank" class="btn">🎨 Behance</a>
+          <a href="https://github.com/nawal-io" target="_blank" class="btn">💻 GitHub</a>
+          <a href="mailto:nawalauliahasanhunaifa@mail.ugm.ac.id" class="btn">✉️ Email</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Ringkasan CV Section -->
+    <section>
+      <h2 class="section-title">Curriculum Vitae</h2>
+      <div class="cv-grid">
+        <div class="cv-box">
+          <h3>🎓 Pendidikan</h3>
+          <div class="cv-item">
+            <div class="title">Universitas Gadjah Mada (UGM)</div>
+            <div class="sub">Teknologi Rekayasa Internet</div>
+          </div>
+        </div>
+        <div class="cv-box">
+          <h3>🛠️ Keahlian & Spesialisasi</h3>
+          <div class="cv-item">
+            <div class="title">Design & Media</div>
+            <div class="sub">Graphic Design, Visual Identity, Brand Design</div>
+          </div>
+          <div class="cv-item">
+            <div class="title">Engineering</div>
+            <div class="sub">Computer Networks, Hardware Simulation, System Architecture</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Auto-Fetched Behance Portfolio Section -->
+    <section>
+      <h2 class="section-title">Portofolio Behance (Otomatis)</h2>
+      <div id="behance-gallery" class="portfolio-grid">
+        <div class="loading-text">Mengambil karya terbaru dari Behance...</div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- JavaScript: Fetch RSS Feed Behance via Client-Side -->
+  <script>
+    const BEHANCE_USERNAME = 'nawalhunaifa';
+    const RSS_CONVERTER_URL = `https://api.rss2json.com/v1/api.json?rss_url=https://www.behance.net/feeds/user?username=${BEHANCE_USERNAME}`;
+
+    async function loadBehanceProjects() {
+      const gallery = document.getElementById('behance-gallery');
+      
+      try {
+        const response = await fetch(RSS_CONVERTER_URL);
+        const data = await response.json();
+
+        if (data.status === 'ok' && data.items.length > 0) {
+          gallery.innerHTML = ''; 
+
+          data.items.forEach(item => {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = item.description;
+            const imgTag = tempDiv.querySelector('img');
+            const imgSrc = imgTag ? imgTag.src : 'https://via.placeholder.com/400x300?text=No+Image';
+
+            const card = document.createElement('a');
+            card.className = 'project-card';
+            card.href = item.link;
+            card.target = '_blank';
+            card.rel = 'noopener noreferrer';
+
+            card.innerHTML = `
+              <img class="project-thumb" src="${imgSrc}" alt="${item.title}" loading="lazy" />
+              <div class="project-details">
+                <div class="project-title">${item.title}</div>
+                <div class="project-meta">Lihat di Behance ↗</div>
+              </div>
+            `;
+
+            gallery.appendChild(card);
+          });
+        } else {
+          gallery.innerHTML = '<div class="loading-text">Tidak ada proyek publik yang ditemukan di Behance.</div>';
+        }
+      } catch (error) {
+        console.error('Error fetching Behance RSS:', error);
+        gallery.innerHTML = '<div class="loading-text">Gagal memuat portofolio otomatis dari Behance. Silakan cek langsung di profil Behance saya.</div>';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadBehanceProjects);
+  </script>
+</body>
+</html>
