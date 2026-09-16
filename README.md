@@ -1,55 +1,49 @@
 # 🌌 Nawal Aulia Hasan Hunaifa | Personal Portfolio & CV Website
 
-<div align="center">
+![GitHub last commit](https://img.shields.io/github/last-commit/nawal-io/nawal-io.github.io?style=flat-square&color=ebbcba)
+![GitHub repo size](https://img.shields.io/github/repo-size/nawal-io/nawal-io.github.io?style=flat-square&color=f6c177)
+![License: MIT](https://img.shields.io/badge/License-MIT-9ccfd8.svg?style=flat-square)
 
-  *Internet Engineering Student @ UGM • Graphic Designer • Visual Creator*
+Repositori ini berisi kode sumber untuk website portofolio dan CV digital interaktif milik **Nawal Aulia Hasan Hunaifa**, Mahasiswa D4 Teknologi Rekayasa Internet Universitas Gadjah Mada (UGM). Website ini dipublikasikan secara langsung melalui [nawal-io.github.io](https://nawal-io.github.io).
 
-  ---
-
-  [![Live Site](https://img.shields.io/badge/Live_Site-nawal--io.github.io-7A52B3?style=for-the-badge&logo=github&logoColor=white)](https://nawal-io.github.io)
-  [![Behance](https://img.shields.io/badge/Behance-nawalhunaifa-0057FF?style=for-the-badge&logo=behance&logoColor=white)](https://behance.net/nawalhunaifa)
-  [![GitHub](https://img.shields.io/badge/GitHub-nawal--io-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nawal-io)
-  [![License: MIT](https://img.shields.io/badge/License-MIT-F5A9B8?style=for-the-badge)](LICENSE)
-
-</div>
-
-<br/>
-
-## 📌 About The Project
-
-Repositori ini berisi kode sumber untuk website portofolio dan CV pribadi milik **Nawal Aulia Hasan Hunaifa** (`nawal-io.github.io`). 
-
-Didesain secara khusus sebagai *Single Page Application* tanpa *framework* berat atau server backend khusus. Website ini menggunakan skema warna **Rosé Pine / Catppuccin Dark Mode** dan terintegrasi secara otomatis dengan **Behance RSS Feed** secara *client-side* untuk menampilkan karya-karya desain terbaru secara real-time.
+![Banner](https://raw.githubusercontent.com/nawal-io/nawal-io.github.io/main/assets/banner.png)
 
 ---
 
-## ✨ Highlight & Fitur Utama
+## 🔗 Link Tautan & Kontak
 
-- 🎨 **Auto-Fetch Behance Projects**: Halaman galeri mengambil gambar, judul, dan link secara otomatis dari profil Behance [`nawalhunaifa`](https://behance.net/nawalhunaifa) tanpa perlu *update* kode manual.
-- ⚡ **Zero Backend / Serverless**: Murni berjalan di *client-side* JavaScript dan di-host gratis di **GitHub Pages**.
-- 🔍 **SEO & Google Search Console Ready**: Dilengkapi *meta tags* lengkap, Open Graph protocol, serta tag verifikasi Google Search Console.
-- 📱 **Fully Responsive & Accessible**: Layout adaptif untuk semua layar (Mobile, Tablet, Desktop) dengan font modern *Plus Jakarta Sans*.
-- 🌙 **Rosé Pine Dark Palette**: Kombinasi warna gelap yang nyaman di mata, elegan, dan estetik.
+[![Live Website](https://img.shields.io/badge/Website-nawal--io.github.io-7A52B3?style=for-the-badge&logo=github&logoColor=white)](https://nawal-io.github.io)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nawal_Aulia-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/nawalauliahasanhunaifa)
+[![Behance](https://img.shields.io/badge/Behance-nawalhunaifa-0057FF?style=for-the-badge&logo=behance&logoColor=white)](https://behance.net/nawalhunaifa)
+[![GitHub Profile](https://img.shields.io/badge/GitHub-nawal--io-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nawal-io)
+[![Email Contact](https://img.shields.io/badge/Email-nawalauliahasanhunaifa%40mail.ugm.ac.id-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nawalauliahasanhunaifa@mail.ugm.ac.id)
+
+---
+
+## 📌 Gambaran Umum Proyek
+
+Website ini dirancang sebagai *Single Page Application* (SPA) performa tinggi tanpa ketergantungan *framework* luar (*Zero-Dependency Architecture*). Tampilan antarmuka (*UI/UX*) mengadopsi skema warna populer **Rosé Pine Dark Mode**, menghadirkan kontras yang pas dan nyaman di mata pengguna.
+
+Website ini berfungsi sebagai CV digital yang menyajikan profil akademis UGM, rekam jejak pengalaman organisasi, keahlian teknis & desain, lisensi sertifikasi resmi, serta showcase portofolio desain visual Behance secara real-time.
 
 ---
 
-## 🛠️ Tech Stack & Alat yang Digunakan
+## ✨ Fitur Utama & Keunggulan
 
-| Kategori | Teknologi |
-|---|---|
-| **Frontend Core** | HTML5, CSS3 (Vanilla / Custom Properties) |
-| **Logic & Data Fetch** | Vanilla JavaScript (Async/Await Fetch API) |
-| **External Integration** | Behance RSS Feed + `rss2json` API |
-| **Hosting & Deployment** | GitHub Pages (User Site) |
-| **Typography & Icons** | Google Fonts (*Plus Jakarta Sans*), Unicode Symbols |
-| **SEO & Indexing** | Google Search Console, Open Graph |
+* 🎨 **Sistem Desain Modern**: Menggunakan skema warna Rosé Pine / Catppuccin Dark yang memberikan kesan elegan dan profesional.
+* ⚡ **Ultra Light & Fast (Zero-Backend)**: Dibuat murni menggunakan kode Vanilla HTML5, CSS3, dan JS tanpa membutuhkan *framework* berat, menghasilkan *load time* yang sangat cepat.
+* 🖼️ **Responsif & Bebas Scrollbar**: Tampilan menyesuaikan secara dinamis pada perangkat Mobile, Tablet, maupun Desktop dengan tata letak visual yang rapi.
+* 🔍 **SEO & Indexing Ready**: Dilengkapi dengan *Open Graph Protocol*, *Meta Tags* komprehensif, dan verifikasi terintegrasi **Google Search Console**.
+* 🛡️ **Koneksi Media CDN**: Gambar profil dan aset visual dimuat secara aman melalui server *Google Content Delivery Network (CDN)*.
 
 ---
+
+
 
 ## 📂 Struktur Repositori
 
 ```text
 nawal-io.github.io/
-├── index.html        # Halaman utama (HTML, CSS, dan JS dalam 1 file)
-├── README.md         # Dokumentasi proyek
-└── LICENSE           # Lisensi open-source (MIT)
+├── index.html          # Halaman utama website (HTML, CSS Custom Properties, Script)
+├── README.md           # Dokumentasi proyek & repositori
+└── LICENSE             # Lisensi open-source (MIT License)
