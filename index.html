@@ -6,8 +6,8 @@
   <title>Nawal Aulia Hasan Hunaifa - Portfolio & CV</title>
   
   <!-- Meta SEO -->
-  <meta name="description" content="Portfolio & CV Nawal Aulia Hasan Hunaifa - Internet Engineering Student UGM & Designer.">
-  <meta name="keywords" content="Nawal Aulia Hasan Hunaifa, UGM, Internet Engineering, Graphic Designer, Portfolio">
+  <meta name="description" content="Portfolio & CV Nawal Aulia Hasan Hunaifa - Mahasiswa D4 Teknologi Rekayasa Internet UGM & Graphic Designer.">
+  <meta name="keywords" content="Nawal Aulia Hasan Hunaifa, UGM, Teknologi Rekayasa Internet, Graphic Designer, Visual Branding, Portfolio">
   
   <!-- Verifikasi Google Search Console -->
   <meta name="google-site-verification" content="KODE_VERIFIKASI_KAMU" />
@@ -19,14 +19,16 @@
 
   <style>
     :root {
-      --bg-base: #1e1b2e;
-      --bg-surface: #2d2640;
-      --bg-card: #362f4c;
+      --bg-base: #13111c;
+      --bg-surface: #1e1a2e;
+      --bg-card: #272238;
+      --bg-pill: #332c4a;
       --text-main: #e0def4;
       --text-muted: #908caa;
       --accent-rose: #ebbcba;
       --accent-purple: #c4a7e7;
-      --border-color: #4a3e63;
+      --accent-gold: #f6c177;
+      --border-color: #3b3352;
     }
 
     * {
@@ -36,15 +38,34 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
+    /* TEKNIK SEMBUNYIKAN SCROLLBAR GLOBAL (SEMUA BROWSER) */
+    html {
+      overflow-y: scroll;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE & Edge */
+    }
+
     body {
       background-color: var(--bg-base);
       color: var(--text-main);
       line-height: 1.6;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE & Edge */
+    }
+
+    /* Chromium (Chrome, Safari, Opera, Edge Baru) */
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar,
+    *::-webkit-scrollbar {
+      width: 0px !important;
+      height: 0px !important;
+      background: transparent !important;
+      display: none !important;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 960px;
       margin: 0 auto;
     }
 
@@ -52,12 +73,12 @@
     .profile-card {
       background: var(--bg-surface);
       border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 2rem;
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     }
 
     @media (min-width: 640px) {
@@ -68,8 +89,8 @@
     }
 
     .avatar-wrapper {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       border: 3px solid var(--accent-purple);
       overflow: hidden;
@@ -84,7 +105,7 @@
     }
 
     .profile-info h1 {
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       color: #ffffff;
       margin-bottom: 0.2rem;
     }
@@ -92,13 +113,14 @@
     .profile-info .subtitle {
       color: var(--accent-purple);
       font-weight: 600;
-      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+      margin-bottom: 0.6rem;
     }
 
-    .profile-info p {
+    .profile-info .bio {
       color: var(--text-muted);
       font-size: 0.95rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
     }
 
     .social-links {
@@ -110,8 +132,8 @@
     .btn {
       display: inline-flex;
       align-items: center;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
+      padding: 0.55rem 1.1rem;
+      border-radius: 10px;
       background: var(--bg-card);
       color: var(--text-main);
       text-decoration: none;
@@ -127,14 +149,14 @@
       border-color: var(--accent-purple);
     }
 
-    /* Section Header */
+    /* Section Headers */
     .section-title {
-      margin: 3rem 0 1.5rem 0;
-      font-size: 1.4rem;
+      margin: 3.5rem 0 1.5rem 0;
+      font-size: 1.35rem;
       color: #ffffff;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.75rem;
     }
 
     .section-title::after {
@@ -144,7 +166,7 @@
       background: var(--border-color);
     }
 
-    /* CV Section Grid */
+    /* CV Section Layouts */
     .cv-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -152,7 +174,7 @@
     }
 
     @media (min-width: 768px) {
-      .cv-grid {
+      .cv-grid-2 {
         grid-template-columns: 1fr 1fr;
       }
     }
@@ -160,91 +182,124 @@
     .cv-box {
       background: var(--bg-surface);
       border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 1.5rem;
+      border-radius: 16px;
+      padding: 1.75rem;
     }
 
     .cv-box h3 {
       color: var(--accent-rose);
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
       font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
-    .cv-item {
-      margin-bottom: 1rem;
+    .timeline-item {
+      margin-bottom: 1.5rem;
+      position: relative;
     }
 
-    .cv-item:last-child {
+    .timeline-item:last-child {
       margin-bottom: 0;
     }
 
-    .cv-item .title {
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 0.3rem;
+    }
+
+    .timeline-title {
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 1rem;
+    }
+
+    .timeline-date {
+      font-size: 0.8rem;
+      color: var(--accent-gold);
       font-weight: 600;
+      background: rgba(246, 193, 119, 0.1);
+      padding: 0.15rem 0.5rem;
+      border-radius: 6px;
+    }
+
+    .timeline-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Skills & Badges */
+    .pill-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .pill {
+      background: var(--bg-pill);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 0.3rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+    }
+
+    .badge-list {
+      list-style: none;
+    }
+
+    .badge-list li {
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .badge-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .badge-list li strong {
       color: #ffffff;
     }
 
-    .cv-item .sub {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    /* Behance Portfolio Gallery Grid */
+    /* Behance Responsive Portfolio Grid */
     .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
       gap: 1.5rem;
     }
 
-    .project-card {
+    .iframe-card {
       background: var(--bg-surface);
       border: 1px solid var(--border-color);
-      border-radius: 12px;
+      border-radius: 16px;
       overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s ease, border-color 0.2s ease;
-      display: flex;
-      flex-direction: column;
+      aspect-ratio: 404 / 316;
+      width: 100%;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      transition: transform 0.25s ease, border-color 0.25s ease;
     }
 
-    .project-card:hover {
+    .iframe-card:hover {
       transform: translateY(-5px);
       border-color: var(--accent-purple);
     }
 
-    .project-thumb {
+    .iframe-card iframe {
       width: 100%;
-      height: 190px;
-      object-fit: cover;
-      background: var(--bg-card);
-    }
-
-    .project-details {
-      padding: 1rem;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .project-title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #ffffff;
-      margin-bottom: 0.5rem;
-    }
-
-    .project-meta {
-      font-size: 0.8rem;
-      color: var(--accent-rose);
-    }
-
-    /* State Handlers */
-    .loading-text {
-      grid-column: 1 / -1;
-      text-align: center;
-      padding: 2rem;
-      color: var(--text-muted);
+      height: 100%;
+      border: none;
+      display: block;
+      scrolling: no; /* Cegah scrollbar internal di dalam iframe */
     }
   </style>
 </head>
@@ -255,12 +310,12 @@
     <!-- Profile & Header Section -->
     <header class="profile-card">
       <div class="avatar-wrapper">
-        <img src="https://github.com/nawal-io.png" alt="Nawal Hunaifa" onerror="this.src='https://ui-avatars.com/api/?name=Nawal+Hunaifa&background=c4a7e7&color=1e1b2e'">
+        <img src="https://ui-avatars.com/api/?name=Nawal+Hunaifa&background=c4a7e7&color=1e1b2e&size=128" alt="Nawal Hunaifa">
       </div>
       <div class="profile-info">
         <h1>Nawal Aulia Hasan Hunaifa</h1>
-        <div class="subtitle">Internet Engineering Student @ UGM & Graphic Designer</div>
-        <p>Fokus pada pengembangan sistem jaringan, simulasi hardware, serta desain grafis & visual brand digital.</p>
+        <div class="subtitle">D4 Teknologi Rekayasa Internet UGM • Visual Designer</div>
+        <p class="bio">Mahasiswa yang berdedikasi tinggi di bidang desain grafis, visual branding, dan produksi media digital. Berlatar belakang kuat dalam pembuatan aset visual media sosial, manajemen konten, serta siap berkontribusi dalam komunikasi visual modern.</p>
         
         <div class="social-links">
           <a href="https://behance.net/nawalhunaifa" target="_blank" class="btn">🎨 Behance</a>
@@ -272,97 +327,166 @@
 
     <!-- Ringkasan CV Section -->
     <section>
-      <h2 class="section-title">Curriculum Vitae</h2>
-      <div class="cv-grid">
+      <h2 class="section-title">Riwayat Pendidikan</h2>
+      <div class="cv-grid cv-grid-2">
         <div class="cv-box">
-          <h3>🎓 Pendidikan</h3>
-          <div class="cv-item">
-            <div class="title">Universitas Gadjah Mada (UGM)</div>
-            <div class="sub">Teknologi Rekayasa Internet</div>
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="timeline-title">D4 Teknologi Rekayasa Internet</span>
+              <span class="timeline-date">2026</span>
+            </div>
+            <div class="timeline-desc" style="color: var(--accent-purple); font-weight: 600;">Universitas Gadjah Mada (UGM)</div>
+            <div class="timeline-desc" style="margin-top: 0.4rem;">Mempelajari fondasi teknologi informasi, infrastruktur jaringan, serta pemanfaatan media digital dan perangkat lunak untuk komunikasi visual modern.</div>
           </div>
         </div>
         <div class="cv-box">
-          <h3>🛠️ Keahlian & Spesialisasi</h3>
-          <div class="cv-item">
-            <div class="title">Design & Media</div>
-            <div class="sub">Graphic Design, Visual Identity, Brand Design</div>
-          </div>
-          <div class="cv-item">
-            <div class="title">Engineering</div>
-            <div class="sub">Computer Networks, Hardware Simulation, System Architecture</div>
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="timeline-title">SMAN 1 Kasihan</span>
+              <span class="timeline-date">2023 - 2026</span>
+            </div>
+            <div class="timeline-desc" style="margin-top: 0.4rem;">Menyelesaikan pendidikan menengah atas dengan fokus pada pengembangan kepemimpinan, kerja tim, dan keterlibatan aktif dalam kegiatan publikasi organisasi sekolah.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Auto-Fetched Behance Portfolio Section -->
+    <!-- Pengalaman Organisasi -->
     <section>
-      <h2 class="section-title">Portofolio Behance (Otomatis)</h2>
+      <h2 class="section-title">Pengalaman Organisasi</h2>
+      <div class="cv-box">
+        
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <span class="timeline-title">PW IPM Daerah Istimewa Yogyakarta</span>
+            <span class="timeline-date">2026 - 2028</span>
+          </div>
+          <div class="timeline-desc">Berkontribusi dalam perancangan aset grafis untuk kampanye media tingkat wilayah dan publikasi acara besar. Mengoordinasikan alur publikasi konten dan dokumentasi visual agar konsisten dengan identitas branding organisasi.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <span class="timeline-title">Karya Muda RT 04</span>
+            <span class="timeline-date">2020 - 2026</span>
+          </div>
+          <div class="timeline-desc">Mengelola seluruh media komunikasi warga dan merancang publikasi visual untuk kegiatan pemuda. Mengambil peran sebagai dokumentator (fotografi/videografi) dan pembuat flyer digital, banner, serta poster acara masyarakat.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <span class="timeline-title">OSIS SMAN 1 Kasihan</span>
+            <span class="timeline-date">2024 - 2025</span>
+          </div>
+          <div class="timeline-desc">Bertanggung jawab penuh atas perancangan desain visual feed Instagram, poster kegiatan, dan spanduk acara. Mengelola publikasi konten media sosial OSIS secara tepat waktu dan menarik.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <span class="timeline-title">PC IPM Wirobrajan</span>
+            <span class="timeline-date">2024 - 2025</span>
+          </div>
+          <div class="timeline-desc">Merancang identitas visual dan materi publikasi (flyer, feeds, banner) untuk berbagai program kerja serta kajian organisasi. Melakukan penyuntingan foto dan konten visual untuk mengoptimalkan jangkauan media digital.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <span class="timeline-title">Dewan Ambalan SMAN 1 Kasihan</span>
+            <span class="timeline-date">2024 - 2025</span>
+          </div>
+          <div class="timeline-desc">Merancang materi publikasi visual, banner kegiatan, serta mengelola dokumentasi media (fotografi dan videografi) untuk seluruh alur kegiatan kepramukaan dan acara besar ambalan.</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Keterampilan, Bahasa & Penghargaan -->
+    <section>
+      <h2 class="section-title">Keahlian & Prestasi</h2>
+      <div class="cv-grid cv-grid-2">
+        
+        <div class="cv-box">
+          <h3>🛠️ Hard & Soft Skills</h3>
+          
+          <div style="margin-bottom: 1rem;">
+            <div style="font-size: 0.85rem; color: var(--accent-rose); font-weight: 600; margin-bottom: 0.4rem;">HARD SKILLS</div>
+            <div class="pill-wrapper">
+              <span class="pill">Graphic Design</span>
+              <span class="pill">Adobe Photoshop</span>
+              <span class="pill">Adobe Illustrator</span>
+              <span class="pill">Canva</span>
+              <span class="pill">Visual Branding</span>
+              <span class="pill">Content Creation</span>
+              <span class="pill">Layout & Typography</span>
+              <span class="pill">Photo Editing</span>
+              <span class="pill">Basic Video Editing</span>
+              <span class="pill">Google Workspace</span>
+            </div>
+          </div>
+
+          <div>
+            <div style="font-size: 0.85rem; color: var(--accent-rose); font-weight: 600; margin-bottom: 0.4rem;">SOFT SKILLS</div>
+            <div class="pill-wrapper">
+              <span class="pill">Creative Thinking</span>
+              <span class="pill">Attention to Detail</span>
+              <span class="pill">Time Management</span>
+              <span class="pill">Adaptability</span>
+              <span class="pill">Team Collaboration</span>
+              <span class="pill">Visual Communication</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cv-box">
+          <h3>🏆 Penghargaan & Sertifikasi</h3>
+          <ul class="badge-list">
+            <li><span>🥇</span> <div><strong>Juara 7 Tryout Magneto</strong> — SMA Muhammadiyah 2 Yogyakarta (2023)</div></li>
+            <li><span>🎨</span> <div><strong>Peserta Lomba Poster Digital</strong> (2023)</div></li>
+            <li><span>📜</span> <div><strong>Sertifikasi Responsive Web Design</strong> — freeCodeCamp (2024)</div></li>
+            <li><span>💻</span> <div><strong>Sertifikat Baparekraf Developer Day</strong> — Dicoding Coaching (2023)</div></li>
+            <li><span>🎓</span> <div><strong>Sertifikat Project & Kursus</strong> — Microsoft / Coursera Network (2024)</div></li>
+          </ul>
+
+          <h3 style="margin-top: 1.5rem;">🗣️ Penguasaan Bahasa</h3>
+          <div class="pill-wrapper">
+            <span class="pill">Indonesia (Native)</span>
+            <span class="pill">Jawa (Native)</span>
+            <span class="pill">Inggris (Intermediate)</span>
+            <span class="pill">Jepang (Basic)</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+   <!-- Behance Portfolio Embed Section -->
+    <section>
+      <h2 class="section-title">Portofolio Behance</h2>
       <div id="behance-gallery" class="portfolio-grid">
-        <div class="loading-text">Mengambil karya terbaru dari Behance...</div>
+        
+        <!-- Proyek 1 -->
+        <div class="iframe-card">
+          <iframe src="https://www.behance.net/embed/project/252195439?ilo0=1" allowfullscreen loading="lazy" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <!-- Proyek 2 -->
+        <div class="iframe-card">
+          <iframe src="https://www.behance.net/embed/project/202450543?ilo0=1" allowfullscreen loading="lazy" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <!-- Proyek 3 -->
+        <div class="iframe-card">
+          <iframe src="https://www.behance.net/embed/project/202450323?ilo0=1" allowfullscreen loading="lazy" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <!-- Proyek 4 (Baru) -->
+        <div class="iframe-card">
+          <iframe src="https://www.behance.net/embed/project/202449825?ilo0=1" allowfullscreen loading="lazy" frameborder="0" scrolling="no"></iframe>
+        </div>
+
       </div>
     </section>
 
   </div>
 
-  <!-- JavaScript: Fetch RSS Feed Behance via Proxy Parser -->
-  <script>
-    const BEHANCE_USERNAME = 'nawalhunaifa';
-    const RSS_URL = `https://www.behance.net/feeds/user?username=${BEHANCE_USERNAME}`;
-    const PROXY_URL = `https://api.allorigins.win/get?url=${encodeURIComponent(RSS_URL)}`;
-
-    async function loadBehanceProjects() {
-      const gallery = document.getElementById('behance-gallery');
-      
-      try {
-        const response = await fetch(PROXY_URL);
-        const data = await response.json();
-
-        if (data.contents) {
-          const parser = new DOMParser();
-          const xmlDoc = parser.parseFromString(data.contents, "text/xml");
-          const items = xmlDoc.querySelectorAll("item");
-
-          if (items.length > 0) {
-            gallery.innerHTML = ''; 
-
-            items.forEach(item => {
-              const title = item.querySelector("title")?.textContent || "Untitled Project";
-              const link = item.querySelector("link")?.textContent || "#";
-              const description = item.querySelector("description")?.textContent || "";
-
-              const tempDiv = document.createElement('div');
-              tempDiv.innerHTML = description;
-              const imgTag = tempDiv.querySelector('img');
-              const imgSrc = imgTag ? imgTag.src : 'https://via.placeholder.com/400x300?text=No+Image';
-
-              const card = document.createElement('a');
-              card.className = 'project-card';
-              card.href = link;
-              card.target = '_blank';
-              card.rel = 'noopener noreferrer';
-
-              card.innerHTML = `
-                <img class="project-thumb" src="${imgSrc}" alt="${title}" loading="lazy" />
-                <div class="project-details">
-                  <div class="project-title">${title}</div>
-                  <div class="project-meta">Lihat di Behance ↗</div>
-                </div>
-              `;
-
-              gallery.appendChild(card);
-            });
-          } else {
-            gallery.innerHTML = '<div class="loading-text">Tidak ada proyek publik yang ditemukan di Behance.</div>';
-          }
-        }
-      } catch (error) {
-        console.error('Error fetching Behance RSS:', error);
-        gallery.innerHTML = '<div class="loading-text">Gagal memuat portofolio. Silakan cek langsung di profil Behance saya.</div>';
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', loadBehanceProjects);
-  </script>
 </body>
 </html>
