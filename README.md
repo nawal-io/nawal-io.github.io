@@ -13,10 +13,8 @@ Repositori ini berisi kode sumber untuk website portofolio dan CV digital intera
 ## 🔗 Link Tautan & Kontak
 
 [![Live Website](https://img.shields.io/badge/Website-nawal--io.github.io-7A52B3?style=for-the-badge&logo=github&logoColor=white)](https://nawal-io.github.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nawal_Aulia-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/nawalauliahasanhunaifa)
 [![Behance](https://img.shields.io/badge/Behance-nawalhunaifa-0057FF?style=for-the-badge&logo=behance&logoColor=white)](https://behance.net/nawalhunaifa)
 [![GitHub Profile](https://img.shields.io/badge/GitHub-nawal--io-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nawal-io)
-[![Email Contact](https://img.shields.io/badge/Email-nawalauliahasanhunaifa%40mail.ugm.ac.id-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nawalauliahasanhunaifa@mail.ugm.ac.id)
 
 ---
 
